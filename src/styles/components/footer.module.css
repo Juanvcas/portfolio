@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');
+
+.main {
+	width: 100%;
+	height: auto;
+	margin-top: 4rem;
+	padding-top: 4rem;
+	background-color: var(--shadowBlue);
+}
+
+.main_cont {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	width: 100%;
+	height: auto;
+}
+
+.nav_git-link {
+	padding: 0.8rem 0.8rem 0.8rem 0;
+}
+
+.nav_git-link > svg {
+	width: 2.8rem;
+	height: auto;
+}
+
+.main_nav ul {
+	display: flex;
+}
+
+.main_nav a {
+	display: block;
+	margin: 0.8rem 0;
+	padding: 0.8rem 0.8rem 0.8rem 0;
+}
+
+.credits {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 2rem;
+	padding: 1.6rem 0;
+}
+
+.main .credits p {
+	font-size: 1.6rem !important;
+}
+
+.main_logo {
+	font-family: 'Roboto Serif', serif;
+	font-size: 2.4rem;
+}
+
+@media (min-width: 768px) {
+	.nav_git-link {
+		padding: 2rem 2rem 2rem 0;
+	}
+
+	.main_nav a {
+		display: block;
+		margin: 2.4rem 0;
+		padding: 2rem 2rem 2rem 0;
+	}
+}

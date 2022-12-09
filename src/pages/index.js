@@ -9,6 +9,7 @@ import {
 	SiMysql,
 	SiWordpress,
 	SiPhp,
+	SiGit,
 	SiHtml5,
 	SiCss3,
 	SiBlender,
@@ -49,11 +50,11 @@ export default function Home() {
 					<div className={'content-limit'}>
 						<h2>Un poco de mi</h2>
 						<p>
-							Soy un simple hermitaño que encontro su lugar y espacio en el
+							Soy un simple persona que encontro su lugar y espacio en el
 							desarrollo de sofware. Comencé en el mundo del soporte técnio en
 							sitio ya que siempre he convivido con la tecnología, por giros de
 							la vida terminé trabajando en la industria de la arquitectura y
-							construcción como dibujante, modelador 3D y renderización, pero
+							construcción como dibujante, modelador 3D y renderizador, pero
 							sentí que ese no era mi lugar, asi que me enfoque en lo que
 							siempre quise y nunca lo supe, la <strong>Programación</strong> y{' '}
 							<strong>Desarrollo de Software</strong>.
@@ -80,15 +81,16 @@ export default function Home() {
 								<SiNodedotjs title='Node.js' />
 								<SiMysql title='MySQL' />
 							</div>
+							<h3>LO BÁSICO</h3>
+							<div className={s['gloss-skl']}>
+								<SiGit title='Git' />
+								<SiHtml5 title='HTML5' />
+								<SiCss3 title='CSS3' />
+							</div>
 							<h3>OTROS</h3>
 							<div className={s['gloss-skl']}>
 								<SiWordpress title='WordPress' />
 								<SiPhp title='PHP' />
-							</div>
-							<h3>LO BÁSICO</h3>
-							<div className={s['gloss-skl']}>
-								<SiHtml5 title='HTML5' />
-								<SiCss3 title='CSS3' />
 							</div>
 						</div>
 						<Link href={'/'} className={s['py-link']}>
@@ -100,9 +102,9 @@ export default function Home() {
 					<div className={'content-limit'}>
 						<h2>Mis otras habilidades</h2>
 						<h3>
-							Tengo conocimientos en modelado 3D avanzado y renderización de
-							imagenes estaticas y videos. Ademas de conocimiento en edición de
-							imagenes y videos.
+							Tengo conocimientos en modelado 3D y renderización de imagenes
+							estaticas y videos. Ademas de conocimiento en edición de imagenes
+							y videos.
 						</h3>
 						<div className={s.skills_gloss}>
 							<h3>Software 3D</h3>
@@ -127,7 +129,7 @@ export default function Home() {
 								/>
 							</div>
 						</div>
-						<Link href={'/'} className={s['ga-link']}>
+						<Link href={'/galery'} className={s['ga-link']}>
 							Galería
 						</Link>
 					</div>
