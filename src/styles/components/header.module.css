@@ -3,6 +3,7 @@
 .main {
 	width: 100%;
 	height: auto;
+	background-color: var(--shadowBlue);
 }
 
 .main .main-cont {
@@ -42,6 +43,7 @@
 	position: absolute;
 	top: 6rem;
 	right: 0;
+	background-color: var(--shadowBlue);
 }
 
 .main_nav ul {

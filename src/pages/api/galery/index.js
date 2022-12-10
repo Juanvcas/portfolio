@@ -1,4 +1,4 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { images } from '../data';
 
 export default function handler(req, res) {
 	if (
@@ -11,8 +11,6 @@ export default function handler(req, res) {
 			respuesta: 'No puedes modificar esta API',
 		});
 	} else {
-		res.status(200).json({
-			bienvenida: '¡Hola, bienvenidos a mi portafolio!',
-		});
+		res.status(200).json(images);
 	}
 }
