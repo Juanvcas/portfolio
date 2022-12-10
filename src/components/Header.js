@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import NavMenu from '../common/NavMenu';
+import NavMenu from '@common/NavMenu';
 import { RiMenuFoldLine, RiMenuUnfoldLine } from 'react-icons/ri';
 import { SiGithub } from 'react-icons/si';
-import s from '../styles/components/header.module.css';
+import s from '@styles/components/header.module.css';
 
 const Header = () => {
 	const [menu, setMenu] = useState(false);

@@ -1,4 +1,4 @@
-import s from '../styles/common/fullImage.module.css';
+import s from '@styles/common/fullImage.module.css';
 
 export const FullImage = (props) => {
 	return (

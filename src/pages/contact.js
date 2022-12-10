@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import { useState } from 'react';
-import AlertMessage from '../common/AlertMessage';
-import useSendEmail from '../hooks/useSendEmail';
-import s from '../styles/pages/contact.module.css';
+import AlertMessage from '@common/AlertMessage';
+import useSendEmail from '@hooks/useSendEmail';
+import s from '@styles/pages/contact.module.css';
 
 const contact = () => {
 	const [alert, setAlert] = useState(false);

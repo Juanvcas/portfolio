@@ -1,5 +1,5 @@
 import { SlCheck, SlClose } from 'react-icons/sl';
-import s from '../styles/common/alert.module.css';
+import s from '@styles/common/alert.module.css';
 
 const AlertMessage = (props) => {
 	return (

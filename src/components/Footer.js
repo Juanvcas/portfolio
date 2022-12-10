@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import NavMenu from '../common/NavMenu';
+import NavMenu from '@common/NavMenu';
 import { SiGithub } from 'react-icons/si';
-import s from '../styles/components/footer.module.css';
+import s from '@styles/components/footer.module.css';
 
 const Footer = () => {
 	return (

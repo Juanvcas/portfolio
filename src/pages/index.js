@@ -15,7 +15,7 @@ import {
 	SiBlender,
 	SiAdobephotoshop,
 } from 'react-icons/si';
-import s from '../styles/pages/home.module.css';
+import s from '@styles/pages/home.module.css';
 
 export default function Home() {
 	return (

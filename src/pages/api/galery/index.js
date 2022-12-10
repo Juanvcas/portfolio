@@ -1,4 +1,4 @@
-import { images } from '../data';
+import { images } from '@api/data';
 
 export default function handler(req, res) {
 	if (
