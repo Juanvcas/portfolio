@@ -1,0 +1,23 @@
+.main {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 3.2rem;
+	padding: 2rem;
+	background-color: var(--green);
+}
+
+.error {
+	background-color: #f53333;
+}
+
+.main p {
+	width: 80%;
+	color: var(--añmostWhite);
+}
+
+.main svg {
+	color: var(--añmostWhite);
+	width: 4rem;
+	height: 4rem;
+}

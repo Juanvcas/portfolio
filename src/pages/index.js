@@ -41,7 +41,7 @@ export default function Home() {
 							web con <strong>JavaScript</strong> utilizando los frameworks{' '}
 							<strong>ReactJS</strong> y <strong>NextJS</strong>.
 						</h3>
-						<Link href={'/'} className={s['cv-link']}>
+						<Link href={'/contact'} className={s['cv-link']}>
 							Contáctame
 						</Link>
 					</div>
@@ -93,9 +93,9 @@ export default function Home() {
 								<SiPhp title='PHP' />
 							</div>
 						</div>
-						<Link href={'/'} className={s['py-link']}>
+						{/* <Link href={'/'} className={s['py-link']}>
 							Proyectos
-						</Link>
+						</Link> */}
 					</div>
 				</section>
 				<section className={`${s.main_cont} ${s.main_skills}`}>
@@ -130,7 +130,7 @@ export default function Home() {
 							</div>
 						</div>
 						<Link href={'/galery'} className={s['ga-link']}>
-							Galería
+							Galería 3D
 						</Link>
 					</div>
 				</section>

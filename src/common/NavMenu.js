@@ -4,17 +4,17 @@ const NavMenu = ({ className, onClick }) => {
 	return (
 		<nav className={className} onClick={onClick}>
 			<ul>
-				<li>
+				{/* <li>
 					<Link href={'/'}>CV</Link>
-				</li>
-				<li>
+				</li> */}
+				{/* <li>
 					<Link href={'/'}>Portafolio</Link>
-				</li>
+				</li> */}
 				<li>
 					<Link href={'/galery'}>Galería</Link>
 				</li>
 				<li>
-					<Link href={'/'}>Contacto</Link>
+					<Link href={'/contact'}>Contacto</Link>
 				</li>
 			</ul>
 		</nav>

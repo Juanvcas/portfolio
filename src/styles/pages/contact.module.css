@@ -1,0 +1,104 @@
+.main_title {
+	padding: 6rem 0 3rem;
+}
+
+.main_title h1 {
+	color: var(--blue);
+}
+
+.main_title h2 {
+	margin-top: 2rem;
+}
+
+.main_form {
+	width: 100%;
+	height: auto;
+}
+
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.form label {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	margin-top: 1.6rem;
+}
+
+.form label span {
+	font-size: 2.8rem;
+}
+
+.form label input {
+	width: 100%;
+	height: 4.2rem;
+	padding: 0.8rem;
+	margin-top: 0.8rem;
+	border-radius: 1rem;
+}
+
+.form label textarea {
+	width: 100%;
+	height: 8rem;
+	padding: 0.8rem;
+	margin-top: 0.8rem;
+	border-radius: 1rem;
+}
+
+.form > input {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 32rem;
+	height: 4.8rem;
+	margin: 0 auto;
+	margin-top: 4rem;
+	color: var(--almostWhite);
+	font-size: 2.4rem;
+	line-height: 2.4rem;
+	background: linear-gradient(to right, var(--blue), var(--green));
+	border-radius: 2.4rem;
+}
+
+@media (min-width: 580px) {
+	.form > input {
+		margin: 0;
+		margin-top: 4rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.form label:nth-child(1),
+	.form label:nth-child(2) {
+		width: 48%;
+	}
+}
+
+@media (min-width: 1024px) {
+	.main_title {
+		padding: 8rem 0 4rem;
+	}
+
+	.form label {
+		margin-top: 3.2rem;
+	}
+
+	.form label input {
+		height: 4.8rem;
+		margin-top: 1.6rem;
+		padding: 1.2rem;
+		font-size: 2.4rem;
+	}
+
+	.form label textarea {
+		height: 14.4rem;
+		margin-top: 1.6rem;
+		padding: 1.2rem;
+		font-size: 2.4rem;
+	}
+}

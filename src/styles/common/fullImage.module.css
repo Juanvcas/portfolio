@@ -1,0 +1,35 @@
+.main {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: #000a;
+	z-index: 100;
+}
+
+.close {
+	position: absolute;
+	top: 2rem;
+	right: 4rem;
+	font-size: 4.8rem;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.image-cont {
+	display: flex;
+	justify-content: center;
+}
+
+.main_image {
+	width: auto;
+	max-width: 90%;
+	height: auto;
+	max-height: 80vh;
+	object-fit: contain;
+	margin: 0 auto;
+}

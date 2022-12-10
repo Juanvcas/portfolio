@@ -1,10 +1,15 @@
-import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import { useFecth } from '../hooks/useFetch';
+import Head from 'next/head';
 import Image from 'next/image';
+import { useFecth } from '../hooks/useFetch';
+import { FullImage } from '../common/FullImage';
 import s from '../styles/pages/galery.module.css';
 
 const galery = () => {
+	const [fullImg, setFullImg] = useState(false);
+	const [image, setImage] = useState('');
+	const [imageName, setImageName] = useState('');
+
 	const images = useFecth('/api/galery');
 	return (
 		<>
@@ -30,12 +35,25 @@ const galery = () => {
 									alt={item.name}
 									loading={'lazy'}
 									className={s.galery_image}
+									onClick={() => {
+										setImageName(item.name);
+										setImage(item.image);
+										setFullImg(true);
+									}}
 								/>
 							);
 						})}
 					</div>
 				</section>
 			</main>
+			{fullImg && (
+				<FullImage
+					image={image}
+					name={imageName}
+					state={fullImg}
+					setState={setFullImg}
+				/>
+			)}
 		</>
 	);
 };
