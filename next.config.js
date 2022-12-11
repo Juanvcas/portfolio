@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	distDir: 'build',
-	useFileSystemPublicRoutes: false,
+	// useFileSystemPublicRoutes: false,
 	reactStrictMode: true,
 	images: {
 		domains: ['bnz06pap001files.storage.live.com'],

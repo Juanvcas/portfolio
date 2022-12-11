@@ -1,31 +1,55 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import AlertMessage from '@common/AlertMessage';
-import useSendEmail from '@hooks/useSendEmail';
 import s from '@styles/pages/contact.module.css';
 
 const contact = () => {
+	const [inputs, setInputs] = useState({
+		name: '',
+		email: '',
+		subject: '',
+		message: '',
+	});
+
 	const [alert, setAlert] = useState(false);
 	const [alertState, setAlertState] = useState();
 	const [alertMsg, setAlertMsg] = useState('Mensaje enviado correctamente.');
 
-	const sendMessage = (e) => {
+	const sendMessage = async (e) => {
 		e.preventDefault();
 
-		const name = document.querySelector(`#form_name`);
-		const email = document.querySelector(`#form_email`);
-		const subject = document.querySelector(`#form_subject`);
-		const body = document.querySelector(`#form_body`);
+		const formName = document.querySelector(`#form_name`);
+		const formEmail = document.querySelector(`#form_email`);
+		const formSubject = document.querySelector(`#form_subject`);
+		const formBody = document.querySelector(`#form_body`);
 
-		console.log(name, email, subject, body);
+		setInputs({
+			name: formName,
+			email: formEmail,
+			subject: formSubject,
+			message: formBody,
+		});
 
-		useSendEmail(
-			subject.value,
-			body.value,
-			setAlert,
-			setAlertState,
-			setAlertMsg
-		);
+		const res = await fetch('./api/send', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(inputs),
+		});
+		const text = await res.text();
+
+		if (res.status === 200) {
+			setAlertMsg('El mensaje se ha enviado correctamente.');
+			setAlertState(true);
+			setAlert(true);
+		} else {
+			setAlertMsg(
+				'Hubo un error al intentar enviar el mensaje, intentalo de nuevo mas tarde.'
+			);
+			setAlertState(false);
+			setAlert(true);
+		}
 	};
 	return (
 		<>
