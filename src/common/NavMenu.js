@@ -5,9 +5,6 @@ const NavMenu = ({ className, onClick }) => {
 		<nav className={className} onClick={onClick}>
 			<ul>
 				{/* <li>
-					<Link href={'/'}>CV</Link>
-				</li> */}
-				{/* <li>
 					<Link href={'/'}>Portafolio</Link>
 				</li> */}
 				<li>
@@ -15,6 +12,9 @@ const NavMenu = ({ className, onClick }) => {
 				</li>
 				<li>
 					<Link href={'/contact'}>Contacto</Link>
+				</li>
+				<li>
+					<Link href={'/cv'}>CV</Link>
 				</li>
 			</ul>
 		</nav>

@@ -15,9 +15,9 @@ import {
 	SiBlender,
 	SiAdobephotoshop,
 } from 'react-icons/si';
-import s from '@styles/pages/home.module.css';
+import s from '@styles/pages/cv.module.css';
 
-export default function Home() {
+const CV = () => {
 	return (
 		<>
 			<Head>
@@ -27,58 +27,69 @@ export default function Home() {
 				<section className={`${s.main_cont} ${s.main_hero}`}>
 					<div className={`content-limit ${s['main_hero-cont']}`}>
 						<h1>
-							Hola!, soy
-							<br /> <strong>Juan Vasquez</strong>
+							<strong>Juan Vasquez</strong>
 						</h1>
-						<h2>DESARROLLADOR WEB</h2>
-						<Link href={'/contact'} className={s['ct-link']}>
-							Contáctame
-						</Link>
+						<h2>FRONTEND DEVELOPER</h2>
 					</div>
 				</section>
 				<section className={`${s.main_cont} ${s.main_desc}`}>
 					<div className={'content-limit'}>
 						<h2>Soluciones en aplicaciones web</h2>
 						<h3>
-							Especializado en aplicaciones web con <strong>JavaScript</strong>{' '}
-							utilizando los frameworks <strong>ReactJS</strong> y{' '}
-							<strong>NextJS</strong>.<br />
-							Te ayudo a crear tu <strong>página web</strong>, ya sea que
-							quieras crear un portafolio, galería, e-commerce o una simple
-							página presentación te la puedo construir.
+							<strong>FrontEnd</strong> developer especializado en aplicaciones
+							web con <strong>JavaScript</strong> utilizando los frameworks{' '}
+							<strong>ReactJS</strong> y <strong>NextJS</strong>.
 						</h3>
+						<Link href={'/contact'} className={s['cv-link']}>
+							Contáctame
+						</Link>
 					</div>
 				</section>
 				<section className={`${s.main_cont} ${s.main_bio}`}>
 					<div className={'content-limit'}>
-						<h2>Aplicaciones y páginas estáticas</h2>
+						<h2>Un poco de mi</h2>
 						<p>
-							Con la ayuda de diferentes tecnologias enfocadas en mejorar la
-							experiencia de usuario y la usabilidad de la página web, te puedo
-							ayudar a encontrar la mejor solución que necesites para tu negocio
-							o imagen de marca personal.
+							Soy un simple persona que encontro su lugar y espacio en el
+							desarrollo de sofware. Comencé en el mundo del soporte técnio en
+							sitio ya que siempre he convivido con la tecnología, por giros de
+							la vida terminé trabajando en la industria de la arquitectura y
+							construcción como dibujante, modelador 3D y renderizador, pero
+							sentí que ese no era mi lugar, asi que me enfoque en lo que
+							siempre quise y nunca lo supe, la <strong>Programación</strong> y{' '}
+							<strong>Desarrollo de Software</strong>.
 						</p>
 					</div>
 				</section>
 				<section className={`${s.main_cont} ${s.main_skills}`}>
 					<div className={'content-limit'}>
-						<h2>Tecnologías</h2>
-						<p>
-							Estas son algunas de las tecnologias con las que te puedo ayudar a
-							contruir lo que estes necesitando.
-						</p>
+						<h2>¿Que se hacer?</h2>
+						<h3>
+							Mis habilidades son mas enfocadas al <strong>FullStack</strong>,
+							pero me centro más en el <strong>FrontEnd</strong>
+						</h3>
 						<div className={s.skills_gloss}>
-							<h3>SOLUCIONES DEL LADO DEL CLIENTE</h3>
+							<h3>FRONTEND</h3>
 							<div className={s['gloss-skl']}>
 								<SiNextdotjs title='Next.js' />
 								<SiReact title='React.js' />
-								<SiWordpress title='WordPress' />
+								<SiJavascript title='JavaScript' />
+								<SiTailwindcss title='TailwindCSS' />
 							</div>
-							<h3>SOLUCIONES PARA APLICACIONES MAS COMPLEJAS</h3>
+							<h3>BACKEND</h3>
 							<div className={s['gloss-skl']}>
 								<SiNodedotjs title='Node.js' />
-								<SiNextdotjs title='Next.js' />
 								<SiMysql title='MySQL' />
+							</div>
+							<h3>LO BÁSICO</h3>
+							<div className={s['gloss-skl']}>
+								<SiGit title='Git' />
+								<SiHtml5 title='HTML5' />
+								<SiCss3 title='CSS3' />
+							</div>
+							<h3>OTROS</h3>
+							<div className={s['gloss-skl']}>
+								<SiWordpress title='WordPress' />
+								<SiPhp title='PHP' />
 							</div>
 						</div>
 						{/* <Link href={'/'} className={s['py-link']}>
@@ -88,16 +99,14 @@ export default function Home() {
 				</section>
 				<section className={`${s.main_cont} ${s.main_skills}`}>
 					<div className={'content-limit'}>
-						<h2>Hay algo mas</h2>
+						<h2>Mis otras habilidades</h2>
 						<h3>
-							Te ofresco varias soluciones en renderización de producto,
-							espacios e imagen de marca, con el fin de mostrar la mejor faceta
-							de tu presentación de nogocio o marca, te puedo ayudar a generar
-							imagenes generadas por computadora para crear imágenes y videos
-							que resalten tu producto y luzcan geniales en tu página web.
+							Tengo conocimientos en modelado 3D y renderización de imagenes
+							estaticas y videos. Ademas de conocimiento en edición de imagenes
+							y videos.
 						</h3>
 						<div className={s.skills_gloss}>
-							<h3>RENDERIZAIÓN DE IMÁGENES Y VIDEOS</h3>
+							<h3>Software 3D</h3>
 							<div className={s['gloss-skl']}>
 								<SiBlender title='Blender' />
 								<img
@@ -107,7 +116,7 @@ export default function Home() {
 									loading='lazy'
 								/>
 							</div>
-							<h3>EDICIÓN</h3>
+							<h3>Edición</h3>
 							<div className={s['gloss-skl']}>
 								<SiAdobephotoshop title='Photoshop' />
 								<img
@@ -127,4 +136,6 @@ export default function Home() {
 			</main>
 		</>
 	);
-}
+};
+
+export default CV;
