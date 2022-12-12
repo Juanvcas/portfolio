@@ -1,4 +1,4 @@
-const images = [
+export const images = [
 	{
 		id: 1,
 		name: 'Cabaña Glamping',
@@ -60,5 +60,3 @@ const images = [
 			'https://bnz06pap001files.storage.live.com/y4me7Fm9UXNqOYzJRPYqYAIoPpI_O5fo6ww1VLLD5-8eiBT9y51epHIGbMoYPprHbp79kDeoI0BweIe95NQ_6Cz6i7Fi--u69DGNx-Zv_1f6JrSJOPTqUpbI6Lh4cPfmpUhSt_APisnYQIRm9Uwa5CTp3u8bZsqMap9-3STG_9UAD7iyejiAS_GqF1ayeL8SfMl?width=1024&height=1024&cropmode=none',
 	},
 ];
-
-export { images };
