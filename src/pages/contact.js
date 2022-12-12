@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import AlertMessage from '@common/AlertMessage';
 import s from '@styles/pages/contact.module.css';
 
@@ -10,12 +11,32 @@ const contact = () => {
 		'El mensaje se ha enviado correctamente.'
 	);
 
-	const submitted = () => {};
+	const form = useRef();
 
-	useEffect(() => {
-		const next = document.querySelector('#_next');
-		next.value = window.location.href;
-	});
+	const submitted = (e) => {
+		e.preventDefault();
+		emailjs
+			.sendForm(
+				`${process.env.NEXT_PUBLIC_EJS_SERVICE}`,
+				`${process.env.NEXT_PUBLIC_EJS_TEMPLATE}`,
+				form.current,
+				`${process.env.NEXT_PUBLIC_EJS_KEY}`
+			)
+			.then(() => {
+				setAlertMsg('El mensaje se ha enviado correctamente.');
+				setAlertState(true);
+				setAlert(true);
+			})
+			.catch((err) => {
+				setAlertMsg(
+					'El mensaje no se pudo enviar, intentalo de nuevo mas tarde.'
+				);
+				setAlertState(false);
+				setAlert(true);
+				console.error(err);
+			});
+	};
+
 	return (
 		<>
 			<Head>
@@ -34,15 +55,16 @@ const contact = () => {
 				<section className={s.main_form}>
 					<div className={`content-limit`}>
 						<form
-							action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL1}`}
-							method='POST'
+							ref={form}
+							id='contact_form'
 							className={s.form}
+							onSubmit={submitted}
 						>
 							<label htmlFor={'name'}>
 								<span>Nombre *</span>
 								<input
 									type={'text'}
-									name={'name'}
+									name={'user_name'}
 									autoComplete={'name'}
 									id={'form_name'}
 									required
@@ -52,22 +74,22 @@ const contact = () => {
 								<span>Email *</span>
 								<input
 									type={'email'}
-									name={'email'}
+									name={'user_email'}
 									autoComplete={'email'}
 									id={'form_email'}
 									required
 								/>
 							</label>
-							<label htmlFor={'subject'}>
+							{/* <label htmlFor={'subject'}>
 								<span>Asunto *</span>
 								<input
 									type={'subject'}
-									name={'subject'}
+									name={'user_subject'}
 									autoComplete={'subject'}
 									id={'form_subject'}
 									required
 								/>
-							</label>
+							</label> */}
 							<label htmlFor={'message'}>
 								<span>Mensaje *</span>
 								<textarea
@@ -83,13 +105,6 @@ const contact = () => {
 								value={'Enviar'}
 								id={'form_submit'}
 							/>
-							<input type='hidden' name='_captcha' value='false'></input>
-							<input
-								type='hidden'
-								name='_autoresponse'
-								value='El mensaje ha sido enviado correctamente'
-							></input>
-							<input id='_next' type='hidden' name='_next' value=''></input>
 						</form>
 						{alert && <AlertMessage message={alertMsg} state={alertState} />}
 					</div>
