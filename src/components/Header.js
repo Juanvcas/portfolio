@@ -46,7 +46,7 @@ const Header = () => {
 		<header className={s.main}>
 			<div className={`content-limit ${s['main-cont']}`}>
 				<Link href={'/'} className={s.main_logo}>
-					jv
+					jv_
 				</Link>
 				<div className={s['nav-cont']}>
 					{menu && <NavMenu className={s.main_nav} onClick={stopEvents} />}

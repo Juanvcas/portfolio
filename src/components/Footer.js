@@ -19,7 +19,7 @@ const Footer = () => {
 			<section className={`content-limit ${s.credits}`}>
 				<p>Hecho con 💙:</p>
 				<Link href={'/'} className={s.main_logo}>
-					jv
+					jv_
 				</Link>
 			</section>
 		</footer>
