@@ -1,20 +1,16 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
 	SiNextdotjs,
 	SiReact,
-	SiJavascript,
-	SiTailwindcss,
 	SiNodedotjs,
 	SiMysql,
 	SiWordpress,
-	SiPhp,
-	SiGit,
-	SiHtml5,
-	SiCss3,
 	SiBlender,
 	SiAdobephotoshop,
 } from 'react-icons/si';
+import { imagesStyles } from '@styles/passingCSS/imagesStyles';
 import s from '@styles/pages/home.module.css';
 
 export default function Home() {
@@ -26,6 +22,13 @@ export default function Home() {
 			<main className={s.main}>
 				<section className={`${s.main_cont} ${s.main_hero}`}>
 					<div className={`content-limit ${s['main_hero-cont']}`}>
+						<figure>
+							<img
+								src='https://bnz06pap001files.storage.live.com/y4msIb9xjk92u8YR9qD9MJtC5lLtsp4106z_NnAHJkNBOlD58F0pXvrLVLRhp9E4jXCWdSpNXebwHKVyn--fN3IPJuFqT97IPxw4pzYwKsFKQoZsMQ3oBaOhgWcyF9eyb2MRCCfoySh4K6NniuC371GtwaK9HvUXsBFh3ThW-yvD0zVUP8lJ_h7q2j1dDo8bBpR?width=244&height=854&cropmode=none'
+								alt='Juan Vasquez'
+								title='Juan Vasquez'
+							/>
+						</figure>
 						<h1>
 							Hola!, soy
 							<br /> <strong>Juan Vasquez</strong>
@@ -39,14 +42,25 @@ export default function Home() {
 				<section className={`${s.main_cont} ${s.main_desc}`}>
 					<div className={'content-limit'}>
 						<h2>Soluciones en aplicaciones web</h2>
-						<h3>
-							Especializado en aplicaciones web con <strong>JavaScript</strong>{' '}
-							utilizando los frameworks <strong>ReactJS</strong> y{' '}
-							<strong>NextJS</strong>.<br />
-							Te ayudo a crear tu <strong>página web</strong>, ya sea que
-							quieras crear un portafolio, galería, e-commerce o una simple
-							página presentación te la puedo construir.
-						</h3>
+						<div className={s['cont-flex']}>
+							<figure>
+								<Image
+									src='/assets/hacker.svg'
+									alt='hacker'
+									width={0}
+									height={0}
+									style={imagesStyles}
+								/>
+							</figure>
+							<h3>
+								Especializado en aplicaciones web con{' '}
+								<strong>JavaScript</strong> utilizando los frameworks{' '}
+								<strong>ReactJS</strong> y <strong>NextJS</strong>.<br />
+								Te ayudo a crear tu <strong>página web</strong>, ya sea que
+								quieras crear un portafolio, galería, e-commerce o una simple
+								página presentación te la puedo construir.
+							</h3>
+						</div>
 					</div>
 				</section>
 				<section className={`${s.main_cont} ${s.main_bio}`}>
@@ -74,10 +88,9 @@ export default function Home() {
 								<SiReact title='React.js' />
 								<SiWordpress title='WordPress' />
 							</div>
-							<h3>SOLUCIONES PARA APLICACIONES MAS COMPLEJAS</h3>
+							<h3>SOLUCIONES EN EL BACKEND</h3>
 							<div className={s['gloss-skl']}>
 								<SiNodedotjs title='Node.js' />
-								<SiNextdotjs title='Next.js' />
 								<SiMysql title='MySQL' />
 							</div>
 						</div>
