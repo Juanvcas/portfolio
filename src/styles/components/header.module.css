@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');
 
 .main {
+	position: relative;
 	width: 100%;
 	height: auto;
 	background-color: var(--shadowBlue);
+	z-index: 100;
 }
 
 .main .main-cont {

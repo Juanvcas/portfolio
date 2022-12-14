@@ -9,6 +9,7 @@ import {
 	SiWordpress,
 	SiBlender,
 	SiAdobephotoshop,
+	SiJavascript,
 } from 'react-icons/si';
 import { imagesStyles } from '@styles/passingCSS/imagesStyles';
 import s from '@styles/pages/home.module.css';
@@ -63,15 +64,26 @@ export default function Home() {
 						</div>
 					</div>
 				</section>
-				<section className={`${s.main_cont} ${s.main_bio}`}>
+				<section className={`${s.main_cont} ${s.main_desc}`}>
 					<div className={'content-limit'}>
 						<h2>Aplicaciones y páginas estáticas</h2>
-						<p>
-							Con la ayuda de diferentes tecnologias enfocadas en mejorar la
-							experiencia de usuario y la usabilidad de la página web, te puedo
-							ayudar a encontrar la mejor solución que necesites para tu negocio
-							o imagen de marca personal.
-						</p>
+						<div className={`${s['cont-flex']} ${s['cont-flex-r']}`}>
+							<figure>
+								<Image
+									src='/assets/progressive.svg'
+									alt='progressive'
+									width={0}
+									height={0}
+									style={imagesStyles}
+								/>
+							</figure>
+							<p>
+								Con la ayuda de diferentes tecnologias enfocadas en mejorar la
+								experiencia de usuario y la usabilidad de la página web, te
+								puedo ayudar a encontrar la mejor solución que necesites para tu
+								negocio o imagen de marca personal.
+							</p>
+						</div>
 					</div>
 				</section>
 				<section className={`${s.main_cont} ${s.main_skills}`}>
@@ -82,8 +94,9 @@ export default function Home() {
 							contruir lo que estes necesitando.
 						</p>
 						<div className={s.skills_gloss}>
-							<h3>SOLUCIONES DEL LADO DEL CLIENTE</h3>
+							<h3>SOLUCIONES EN EL FRONTEND</h3>
 							<div className={s['gloss-skl']}>
+								<SiJavascript title='JavaScript' />
 								<SiNextdotjs title='Next.js' />
 								<SiReact title='React.js' />
 								<SiWordpress title='WordPress' />
@@ -110,7 +123,7 @@ export default function Home() {
 							que resalten tu producto y luzcan geniales en tu página web.
 						</h3>
 						<div className={s.skills_gloss}>
-							<h3>RENDERIZAIÓN DE IMÁGENES Y VIDEOS</h3>
+							<h3>RENDERIZAIÓN</h3>
 							<div className={s['gloss-skl']}>
 								<SiBlender title='Blender' />
 								<img

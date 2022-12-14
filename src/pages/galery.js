@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
 import { useFecth } from '@hooks/useFetch';
 import { FullImage } from '@common/FullImage';
 import s from '@styles/pages/galery.module.css';

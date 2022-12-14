@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import NavMenu from '@common/NavMenu';
 import { RiMenuFoldLine, RiMenuUnfoldLine } from 'react-icons/ri';
@@ -8,6 +9,8 @@ import s from '@styles/components/header.module.css';
 const Header = () => {
 	const [menu, setMenu] = useState(false);
 	const [button, setButton] = useState(true);
+
+	const router = useRouter();
 
 	const handlerNav = (e) => {
 		setMenu(!menu);
@@ -41,6 +44,8 @@ const Header = () => {
 				setMenu(false);
 			}
 		});
+
+		router.events.on('routeChangeComplete', () => setMenu(false));
 	}, []);
 	return (
 		<header className={s.main}>
