@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap');
 
 .main {
+	position: relative;
 	width: 100%;
 	height: auto;
 	background-color: var(--shadowBlue);
+	z-index: 100;
 }
 
 .main .main-cont {
@@ -17,6 +19,10 @@
 .main_logo {
 	font-family: 'Roboto Serif', serif;
 	font-size: 3.6rem;
+}
+
+.main_logo:hover {
+	filter: brightness(80%);
 }
 
 .nav-cont {
@@ -44,6 +50,7 @@
 	top: 6rem;
 	right: 0;
 	background-color: var(--shadowBlue);
+	border-radius: 0 0 2rem 2rem;
 }
 
 .main_nav ul {
@@ -56,6 +63,14 @@
 
 .main_nav ul li {
 	margin-top: 1.6rem;
+}
+
+.main_nav ul a {
+	font-size: 3.6rem;
+}
+
+.main_nav a:hover {
+	filter: brightness(80%);
 }
 
 .nav_button {
@@ -77,6 +92,7 @@
 		position: initial;
 		top: auto;
 		right: auto;
+		border-radius: none;
 	}
 
 	.main_nav ul {
@@ -89,6 +105,10 @@
 
 	.main_nav ul li {
 		margin: 0;
+	}
+
+	.main_nav ul a {
+		font-size: inherit;
 	}
 
 	.main_nav a {

@@ -6,6 +6,7 @@ class MyDocument extends Document {
 			<Html lang='es-ES'>
 				<Head>
 					<meta name='robots' content='noindex,nofollow' />
+					<link rel='shortcut icon' href='/favicon.ico' />
 					<link rel='preconnect' href='https://fonts.googleapis.com' />
 					<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
 					<link

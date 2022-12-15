@@ -36,6 +36,10 @@
 	padding: 0.8rem 0.8rem 0.8rem 0;
 }
 
+.main_nav a:hover {
+	filter: brightness(80%);
+}
+
 .credits {
 	display: flex;
 	justify-content: space-between;

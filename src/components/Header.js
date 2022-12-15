@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import NavMenu from '@common/NavMenu';
 import { RiMenuFoldLine, RiMenuUnfoldLine } from 'react-icons/ri';
@@ -8,6 +9,8 @@ import s from '@styles/components/header.module.css';
 const Header = () => {
 	const [menu, setMenu] = useState(false);
 	const [button, setButton] = useState(true);
+
+	const router = useRouter();
 
 	const handlerNav = (e) => {
 		setMenu(!menu);
@@ -37,6 +40,12 @@ const Header = () => {
 		});
 
 		document.body.addEventListener('click', () => {
+			if (window.innerWidth < 768) {
+				setMenu(false);
+			}
+		});
+
+		router.events.on('routeChangeComplete', () => {
 			if (window.innerWidth < 768) {
 				setMenu(false);
 			}
