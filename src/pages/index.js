@@ -25,9 +25,10 @@ export default function Home() {
 					<div className={`content-limit ${s['main_hero-cont']}`}>
 						<figure>
 							<img
-								src='https://bnz06pap001files.storage.live.com/y4msIb9xjk92u8YR9qD9MJtC5lLtsp4106z_NnAHJkNBOlD58F0pXvrLVLRhp9E4jXCWdSpNXebwHKVyn--fN3IPJuFqT97IPxw4pzYwKsFKQoZsMQ3oBaOhgWcyF9eyb2MRCCfoySh4K6NniuC371GtwaK9HvUXsBFh3ThW-yvD0zVUP8lJ_h7q2j1dDo8bBpR?width=244&height=854&cropmode=none'
+								src='/assets/portada.png'
 								alt='Juan Vasquez'
 								title='Juan Vasquez'
+								loading='lazy'
 							/>
 						</figure>
 						<h1>
@@ -35,7 +36,7 @@ export default function Home() {
 							<br /> <strong>Juan Vasquez</strong>
 						</h1>
 						<h2>DESARROLLADOR WEB</h2>
-						<Link href={'/contact'} className={s['ct-link']}>
+						<Link href={'/contact'} className='link'>
 							Contáctame
 						</Link>
 					</div>
@@ -46,8 +47,8 @@ export default function Home() {
 						<div className={s['cont-flex']}>
 							<figure>
 								<Image
-									src='/assets/hacker.svg'
-									alt='hacker'
+									src='/assets/design.svg'
+									alt='design'
 									width={0}
 									height={0}
 									style={imagesStyles}
@@ -58,15 +59,15 @@ export default function Home() {
 								<strong>JavaScript</strong> utilizando los frameworks{' '}
 								<strong>ReactJS</strong> y <strong>NextJS</strong>.<br />
 								Te ayudo a crear tu <strong>página web</strong>, ya sea que
-								quieras crear un portafolio, galería, e-commerce o una simple
-								página presentación te la puedo construir.
+								quieras crear un e-commerce, portafolio, galería o una página
+								para tu marca personal.
 							</h3>
 						</div>
 					</div>
 				</section>
 				<section className={`${s.main_cont} ${s.main_desc}`}>
 					<div className={'content-limit'}>
-						<h2>Aplicaciones y páginas estáticas</h2>
+						<h2>Aplicaciones web y páginas estáticas</h2>
 						<div className={`${s['cont-flex']} ${s['cont-flex-r']}`}>
 							<figure>
 								<Image
@@ -79,9 +80,10 @@ export default function Home() {
 							</figure>
 							<p>
 								Con la ayuda de diferentes tecnologias enfocadas en mejorar la
-								experiencia de usuario y la usabilidad de la página web, te
-								puedo ayudar a encontrar la mejor solución que necesites para tu
-								negocio o imagen de marca personal.
+								usabilidad en la web y la{' '}
+								<strong>experiencia de usuario</strong>, te puedo ayudar a
+								encontrar <strong>la mejor solución</strong> que necesites para
+								tu página web.
 							</p>
 						</div>
 					</div>
@@ -90,8 +92,10 @@ export default function Home() {
 					<div className={'content-limit'}>
 						<h2>Tecnologías</h2>
 						<p>
-							Estas son algunas de las tecnologias con las que te puedo ayudar a
-							contruir lo que estes necesitando.
+							Utilizando las <strong>herramientas top</strong> en la industria
+							se asegura la mejor experiencia en la navegación y total{' '}
+							<strong>flexibilidad en el diseño</strong> sin depender de
+							plantillas y limitaciones.
 						</p>
 						<div className={s.skills_gloss}>
 							<h3>SOLUCIONES EN EL FRONTEND</h3>
@@ -114,13 +118,15 @@ export default function Home() {
 				</section>
 				<section className={`${s.main_cont} ${s.main_skills}`}>
 					<div className={'content-limit'}>
-						<h2>Hay algo mas</h2>
+						<h2>Hay mas!</h2>
 						<h3>
-							Te ofresco varias soluciones en renderización de producto,
-							espacios e imagen de marca, con el fin de mostrar la mejor faceta
-							de tu presentación de nogocio o marca, te puedo ayudar a generar
-							imagenes generadas por computadora para crear imágenes y videos
-							que resalten tu producto y luzcan geniales en tu página web.
+							Te ofresco una solucion en{' '}
+							<strong>renderización de producto</strong>, espacios e imagen de
+							marca y mostrar la mejor faceta de tu presentación de nogocio o
+							marca personal. <br />
+							Generando imagenes por computadora, se{' '}
+							<strong>resalta tu producto</strong> para mostrar lo mejor en
+							cualquier ambito y luzca genial en <strong>tu página web</strong>.
 						</h3>
 						<div className={s.skills_gloss}>
 							<h3>RENDERIZAIÓN</h3>
@@ -145,7 +151,7 @@ export default function Home() {
 								/>
 							</div>
 						</div>
-						<Link href={'/galery'} className={s['ga-link']}>
+						<Link href={'/galery'} className='link'>
 							Galería 3D
 						</Link>
 					</div>

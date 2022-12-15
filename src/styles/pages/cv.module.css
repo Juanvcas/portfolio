@@ -42,22 +42,25 @@
 	text-align: justify;
 }
 
-.cv-link,
-.py-link,
-.ga-link {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: auto;
-	max-width: 32rem;
-	height: 4.8rem;
-	margin: 0 auto;
-	margin-top: 4rem;
-	color: var(--almostWhite);
+.exp_art {
+	margin: 2rem 0;
+	padding: 1rem 0;
+	border-top: solid 0.1rem var(--almostWhite);
+	border-bottom: solid 0.1rem var(--almostWhite);
+}
+
+.exp_art h3 {
 	font-size: 2.4rem;
-	line-height: 2.4rem;
-	background: linear-gradient(to right, var(--blue), var(--green));
-	border-radius: 2.4rem;
+	letter-spacing: 0.2rem;
+	color: var(--blue);
+}
+
+.exp_art h4 {
+	font-weight: 300;
+}
+
+.exp_art > p {
+	margin-top: 1rem;
 }
 
 .main_bio p {
@@ -70,7 +73,8 @@
 	text-align: justify;
 }
 
-.skills_gloss {
+.skills_gloss,
+.exp_gloss {
 	display: grid;
 	grid-template-columns: auto 1fr;
 	grid-template-rows: repeat(4, auto);
@@ -81,7 +85,12 @@
 	margin-top: 2rem;
 }
 
-.skills_gloss h3 {
+.exp_gloss {
+	grid-template-rows: repeat(2, auto);
+}
+
+.skills_gloss h3,
+.exp_gloss p {
 	padding: 0 1rem;
 }
 
@@ -106,15 +115,6 @@
 
 .gloss-skl .skl-img {
 	filter: invert(100%);
-}
-
-@media (min-width: 480px) {
-	.cv-link,
-	.py-link,
-	.ga-link {
-		margin: 0;
-		margin-top: 4rem;
-	}
 }
 
 @media (min-width: 580px) {

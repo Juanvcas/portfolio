@@ -24,24 +24,54 @@ const galery = () => {
 						</h2>
 					</div>
 				</section>
-				<section className={s.main_galery}>
-					<div className={`content-limit ${s.galery_grid}`}>
-						{images.map((item, index) => {
-							return (
-								<img
-									key={index}
-									src={item.image}
-									alt={item.name}
-									loading={'lazy'}
-									className={s.galery_image}
-									onClick={() => {
-										setImageName(item.name);
-										setImage(item.image);
-										setFullImg(true);
-									}}
-								/>
-							);
-						})}
+				<section className={`content-limit ${s.main_galery}`}>
+					<h3>Líneas y Diseños</h3>
+					<div className={s['grid-cont']}>
+						<div className={s.galery_grid}>
+							{images.map((item, index) => {
+								if (item.category.id === 1) {
+									return (
+										<img
+											key={index}
+											src={item.image}
+											alt={item.name}
+											loading={'lazy'}
+											className={s.galery_image}
+											onClick={() => {
+												setImageName(item.name);
+												setImage(item.image);
+												setFullImg(true);
+											}}
+										/>
+									);
+								}
+							})}
+						</div>
+					</div>
+				</section>
+				<section className={`content-limit ${s.main_galery}`}>
+					<h3>Otros</h3>
+					<div className={s['grid-cont']}>
+						<div className={s.galery_grid}>
+							{images.map((item, index) => {
+								if (item.category.id === 0) {
+									return (
+										<img
+											key={index}
+											src={item.image}
+											alt={item.name}
+											loading={'lazy'}
+											className={s.galery_image}
+											onClick={() => {
+												setImageName(item.name);
+												setImage(item.image);
+												setFullImg(true);
+											}}
+										/>
+									);
+								}
+							})}
+						</div>
 					</div>
 				</section>
 			</main>

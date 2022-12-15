@@ -40,24 +40,44 @@ const CV = () => {
 							web con <strong>JavaScript</strong> utilizando los frameworks{' '}
 							<strong>ReactJS</strong> y <strong>NextJS</strong>.
 						</h3>
-						<Link href={'/contact'} className={s['cv-link']}>
+						<Link href={'/contact'} className='link'>
 							Contáctame
 						</Link>
 					</div>
 				</section>
-				<section className={`${s.main_cont} ${s.main_bio}`}>
+				<section className={`${s.main_cont} ${s.main_exp}`}>
 					<div className={'content-limit'}>
-						<h2>Un poco de mi</h2>
-						<p>
-							Soy un simple persona que encontro su lugar y espacio en el
-							desarrollo de sofware. Comencé en el mundo del soporte técnio en
-							sitio ya que siempre he convivido con la tecnología, por giros de
-							la vida terminé trabajando en la industria de la arquitectura y
-							construcción como dibujante, modelador 3D y renderizador, pero
-							sentí que ese no era mi lugar, asi que me enfoque en lo que
-							siempre quise y nunca lo supe, la <strong>Programación</strong> y{' '}
-							<strong>Desarrollo de Software</strong>.
-						</p>
+						<h2>Experiencia Reciente</h2>
+						<article className={s.exp_art}>
+							<h3>CONTENT DEVELOPER</h3>
+							<h4>Líneas y Diseños - 5 meses</h4>
+							<p>
+								Creación de la página web de la empresa y tienda online.
+								<br />
+								Renderización de contenido (imágenes y videos) de los productos
+								de la empresa para redes sociales y página web.
+							</p>
+
+							<div className={s.exp_gloss}>
+								<p>PÁGINA WEB</p>
+								<div className={s['gloss-skl']}>
+									<SiWordpress title='WordPress' />
+									<SiJavascript title='JavaScript' />
+									<SiCss3 title='CSS3' />
+									<SiPhp title='PHP' />
+								</div>
+								<p>RENDERIZACIÓN</p>
+								<div className={s['gloss-skl']}>
+									<SiBlender title='Blender' />
+									<img
+										src='https://img.icons8.com/nolan/96/autodesk-3ds-max.png'
+										alt='3Ds max'
+										title='3Ds Max'
+										loading='lazy'
+									/>
+								</div>
+							</div>
+						</article>
 					</div>
 				</section>
 				<section className={`${s.main_cont} ${s.main_skills}`}>
@@ -65,7 +85,7 @@ const CV = () => {
 						<h2>¿Que se hacer?</h2>
 						<h3>
 							Mis habilidades son mas enfocadas al <strong>FullStack</strong>,
-							pero me centro más en el <strong>FrontEnd</strong>
+							pero me centro más en el <strong>FrontEnd</strong>.
 						</h3>
 						<div className={s.skills_gloss}>
 							<h3>FRONTEND</h3>
@@ -95,6 +115,21 @@ const CV = () => {
 						{/* <Link href={'/'} className={s['py-link']}>
 							Proyectos
 						</Link> */}
+					</div>
+				</section>
+				<section className={`${s.main_cont} ${s.main_bio}`}>
+					<div className={'content-limit'}>
+						<h2>Un poco de mi</h2>
+						<p>
+							Soy un simple persona que encontro su lugar y espacio en el
+							desarrollo de sofware. Comencé en el mundo del soporte técnio en
+							sitio ya que siempre he convivido con la tecnología, por giros de
+							la vida terminé trabajando en la industria de la arquitectura y
+							construcción como dibujante, modelador 3D y renderizador, pero
+							sentí que ese no era mi lugar, asi que me enfoque en lo que
+							siempre quise y nunca lo supe, la <strong>Programación</strong> y{' '}
+							<strong>Desarrollo de Software</strong>.
+						</p>
 					</div>
 				</section>
 				<section className={`${s.main_cont} ${s.main_skills}`}>
@@ -128,7 +163,7 @@ const CV = () => {
 								/>
 							</div>
 						</div>
-						<Link href={'/galery'} className={s['ga-link']}>
+						<Link href={'/galery'} className='link'>
 							Galería 3D
 						</Link>
 					</div>

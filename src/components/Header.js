@@ -45,7 +45,11 @@ const Header = () => {
 			}
 		});
 
-		router.events.on('routeChangeComplete', () => setMenu(false));
+		router.events.on('routeChangeComplete', () => {
+			if (window.innerWidth < 768) {
+				setMenu(false);
+			}
+		});
 	}, []);
 	return (
 		<header className={s.main}>
