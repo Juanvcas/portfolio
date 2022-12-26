@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import {
 	SiNextdotjs,
 	SiReact,
 	SiJavascript,
+	SiTypescript,
 	SiTailwindcss,
 	SiNodedotjs,
 	SiMysql,
@@ -15,6 +15,7 @@ import {
 	SiBlender,
 	SiAdobephotoshop,
 } from 'react-icons/si';
+import { LinkButton } from '@common/Buttons';
 import s from '@styles/pages/cv.module.css';
 
 const CV = () => {
@@ -40,9 +41,7 @@ const CV = () => {
 							web con <strong>JavaScript</strong> utilizando los frameworks{' '}
 							<strong>ReactJS</strong> y <strong>NextJS</strong>.
 						</h3>
-						<Link href={'/contact'} className='link'>
-							Contáctame
-						</Link>
+						<LinkButton link={'/contact'} text={'Contáctame'} />
 					</div>
 				</section>
 				<section className={`${s.main_cont} ${s.main_exp}`}>
@@ -50,14 +49,17 @@ const CV = () => {
 						<h2>Experiencia Reciente</h2>
 						<article className={s.exp_art}>
 							<h3>CONTENT DEVELOPER</h3>
-							<h4>Líneas y Diseños - 5 meses</h4>
+							<h4>Líneas y Diseños - 11 meses</h4>
 							<p>
-								Creación de la página web de la empresa y tienda online.
+								Creación de la página web de la empresa y tienda online con{' '}
+								<strong>WordPress</strong>, estructura, diseño, productos, base
+								de datos y mantenimiento.
+								<br /> Desarrollo de aplicaciones web con{' '}
+								<strong>Vanilla JavaScript</strong> y <strong>PHP</strong>.
 								<br />
 								Renderización de contenido (imágenes y videos) de los productos
 								de la empresa para redes sociales y página web.
 							</p>
-
 							<div className={s.exp_gloss}>
 								<p>PÁGINA WEB</p>
 								<div className={s['gloss-skl']}>
@@ -78,13 +80,38 @@ const CV = () => {
 								</div>
 							</div>
 						</article>
+						<article className={s.exp_art}>
+							<h3>FREELANCE</h3>
+							<h4>Actualidad</h4>
+							<p>
+								Creación de proyectos web en diversos ámbitos como e-commerce,
+								dashboards, aplicaciones web, creación y consumo de API REST,
+								bases de datos SQL, entro otros.
+								<br />
+								Exploración de nuevas tecnologías enfocadas a la web y
+								desarrollo continuo de habilidades.
+							</p>
+							<div className={s.exp_gloss}>
+								<p>PROYECTOS WEB</p>
+								<div className={s['gloss-skl']}>
+									<SiNextdotjs title='Next.js' />
+									<SiJavascript title='JavaScript' />
+									<SiTypescript title='TypeScript' />
+									<SiTailwindcss title='TailwindCSS' />
+								</div>
+								<p>3D Y RENDERIZACIÓN</p>
+								<div className={s['gloss-skl']}>
+									<SiBlender title='Blender' />
+								</div>
+							</div>
+						</article>
 					</div>
 				</section>
 				<section className={`${s.main_cont} ${s.main_skills}`}>
 					<div className={'content-limit'}>
-						<h2>¿Que se hacer?</h2>
+						<h2>¿Qué sé hacer?</h2>
 						<h3>
-							Mis habilidades son mas enfocadas al <strong>FullStack</strong>,
+							Mis habilidades son más enfocadas al <strong>FullStack</strong>,
 							pero me centro más en el <strong>FrontEnd</strong>.
 						</h3>
 						<div className={s.skills_gloss}>
@@ -93,6 +120,7 @@ const CV = () => {
 								<SiNextdotjs title='Next.js' />
 								<SiReact title='React.js' />
 								<SiJavascript title='JavaScript' />
+								<SiTypescript title='Typescript' />
 								<SiTailwindcss title='TailwindCSS' />
 							</div>
 							<h3>BACKEND</h3>
@@ -121,13 +149,14 @@ const CV = () => {
 					<div className={'content-limit'}>
 						<h2>Un poco de mi</h2>
 						<p>
-							Soy un simple persona que encontro su lugar y espacio en el
-							desarrollo de sofware. Comencé en el mundo del soporte técnio en
-							sitio ya que siempre he convivido con la tecnología, por giros de
-							la vida terminé trabajando en la industria de la arquitectura y
-							construcción como dibujante, modelador 3D y renderizador, pero
-							sentí que ese no era mi lugar, asi que me enfoque en lo que
-							siempre quise y nunca lo supe, la <strong>Programación</strong> y{' '}
+							Comencé en el mundo del soporte técnico en sitio, ya que siempre
+							he convivido con la tecnología. Por giros de la vida terminé
+							trabajando en la industria de la arquitectura y construcción como
+							dibujante, modelador 3D y renderizador de productos. <br />
+							Tras un tiempo sentí que ese no era mi lugar, ya que lo había
+							hecho más por presión familiar, así que deje todo eso atrás y me
+							enfoque en lo que siempre quise y no supe por mucho tiempo, la{' '}
+							<strong>Programación</strong> y{' '}
 							<strong>Desarrollo de Software</strong>.
 						</p>
 					</div>
@@ -136,9 +165,9 @@ const CV = () => {
 					<div className={'content-limit'}>
 						<h2>Mis otras habilidades</h2>
 						<h3>
-							Tengo conocimientos en modelado 3D y renderización de imagenes
-							estaticas y videos. Ademas de conocimiento en edición de imagenes
-							y videos.
+							Tengo conocimientos en modelado 3D y renderización de imágenes
+							estáticas y videos. Además de conocimiento en edición de contenido
+							multimedia.
 						</h3>
 						<div className={s.skills_gloss}>
 							<h3>Software 3D</h3>
@@ -163,9 +192,7 @@ const CV = () => {
 								/>
 							</div>
 						</div>
-						<Link href={'/galery'} className='link'>
-							Galería 3D
-						</Link>
+						<LinkButton link={'/galery'} text={'Galería 3D'} />
 					</div>
 				</section>
 			</main>

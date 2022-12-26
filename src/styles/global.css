@@ -3,9 +3,8 @@
 /* Variables */
 :root {
 	--shadowBlue: #010910;
-	--darkBlue: #092025;
+	--darkBlue: #02111e;
 	--blue: #0da5d3;
-	--green: #0dd3af;
 	--almostWhite: #efefef;
 	--almostBlack: #0f0f0f;
 }
@@ -82,7 +81,7 @@ strong {
 	color: var(--almostWhite);
 	font-size: 2.4rem;
 	line-height: 2.4rem;
-	background: linear-gradient(to right, var(--blue), var(--green));
+	background: var(--blue);
 	border-radius: 2.4rem;
 }
 
@@ -97,6 +96,12 @@ strong {
 	}
 }
 
+.separator {
+	height: 0.1rem;
+	margin-top: 6rem;
+	background-color: var(--almostWhite);
+}
+
 @media (min-width: 580px) {
 	/* Classes */
 	.content-limit {
@@ -105,6 +110,11 @@ strong {
 		height: auto;
 		margin: 0 auto;
 	}
+}
+
+.separator {
+	height: 0.1rem;
+	margin-top: 6rem;
 }
 
 @media (min-width: 768px) {

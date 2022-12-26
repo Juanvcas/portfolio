@@ -43,10 +43,13 @@
 }
 
 .exp_art {
-	margin: 2rem 0;
 	padding: 1rem 0;
-	border-top: solid 0.1rem var(--almostWhite);
 	border-bottom: solid 0.1rem var(--almostWhite);
+}
+
+.exp_art:nth-child(2) {
+	margin-top: 2rem;
+	border-top: solid 0.1rem var(--almostWhite);
 }
 
 .exp_art h3 {
@@ -61,6 +64,7 @@
 
 .exp_art > p {
 	margin-top: 1rem;
+	text-align: justify;
 }
 
 .main_bio p {

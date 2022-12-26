@@ -7,12 +7,15 @@ export const FullImage = (props) => {
 				X
 			</span>
 			<div className={`content-limit ${s['image-cont']}`}>
-				<img
-					src={props.image}
-					alt={props.name}
-					className={s.main_image}
-					onClick={(e) => e.stopPropagation()}
-				/>
+				<label onClick={(e) => e.stopPropagation()}>
+					<input type={'checkbox'} hidden />
+					<img
+						src={props.image}
+						alt={props.name}
+						className={s.main_image}
+						onClick={(e) => e.stopPropagation()}
+					/>
+				</label>
 			</div>
 		</div>
 	);

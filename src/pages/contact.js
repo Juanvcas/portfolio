@@ -47,7 +47,7 @@ const contact = () => {
 					<div className={`content-limit`}>
 						<h1>Contacto</h1>
 						<h2>
-							Si quieres contactárme para cotizar algun proyecto que tengas en
+							Si quieres contactárme para realizar algun proyecto que tengas en
 							mente, puedes escribirme a travez de este formulario.
 						</h2>
 					</div>
@@ -104,6 +104,7 @@ const contact = () => {
 								name={'submit'}
 								value={'Enviar'}
 								id={'form_submit'}
+								className={'link'}
 							/>
 						</form>
 						{alert && <AlertMessage message={alertMsg} state={alertState} />}

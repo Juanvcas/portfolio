@@ -25,11 +25,34 @@
 	justify-content: center;
 }
 
-.main_image {
-	width: auto;
+.image-cont label {
 	max-width: 90%;
+	overflow: auto;
+}
+
+.image-cont input:checked ~ img {
+	transform: scale(1.5);
+}
+
+.main_image {
+	width: 100%;
 	height: auto;
 	max-height: 80vh;
 	object-fit: contain;
 	margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+	.image-cont label::-webkit-scrollbar {
+		max-width: 0.5rem;
+	}
+
+	.image-cont label::-webkit-scrollbar-track,
+	.image-cont label::-webkit-scrollbar-corner {
+		background: #0005;
+	}
+
+	.image-cont label::-webkit-scrollbar-thumb {
+		background-color: var(--blue);
+	}
 }

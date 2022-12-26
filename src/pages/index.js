@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import {
 	SiNextdotjs,
 	SiReact,
@@ -10,7 +9,9 @@ import {
 	SiBlender,
 	SiAdobephotoshop,
 	SiJavascript,
+	SiTypescript,
 } from 'react-icons/si';
+import { LinkButton } from '@common/Buttons';
 import { imagesStyles } from '@styles/passingCSS/imagesStyles';
 import s from '@styles/pages/home.module.css';
 
@@ -36,9 +37,7 @@ export default function Home() {
 							<br /> <strong>Juan Vasquez</strong>
 						</h1>
 						<h2>DESARROLLADOR WEB</h2>
-						<Link href={'/contact'} className='link'>
-							Contáctame
-						</Link>
+						<LinkButton link={'/contact'} text={'Contáctame'} />
 					</div>
 				</section>
 				<section className={`${s.main_cont} ${s.main_desc}`}>
@@ -79,7 +78,7 @@ export default function Home() {
 								/>
 							</figure>
 							<p>
-								Con la ayuda de diferentes tecnologias enfocadas en mejorar la
+								Con la ayuda de diferentes tecnologías enfocadas en mejorar la
 								usabilidad en la web y la{' '}
 								<strong>experiencia de usuario</strong>, te puedo ayudar a
 								encontrar <strong>la mejor solución</strong> que necesites para
@@ -101,6 +100,7 @@ export default function Home() {
 							<h3>SOLUCIONES EN EL FRONTEND</h3>
 							<div className={s['gloss-skl']}>
 								<SiJavascript title='JavaScript' />
+								<SiTypescript title='TypeScript' />
 								<SiNextdotjs title='Next.js' />
 								<SiReact title='React.js' />
 								<SiWordpress title='WordPress' />
@@ -116,17 +116,18 @@ export default function Home() {
 						</Link> */}
 					</div>
 				</section>
+				<div className='content-limit separator'></div>
 				<section className={`${s.main_cont} ${s.main_skills}`}>
 					<div className={'content-limit'}>
-						<h2>Hay mas!</h2>
+						<h2>¡Hay mas!</h2>
 						<h3>
-							Te ofresco una solucion en{' '}
+							Te ofrezco una solución en{' '}
 							<strong>renderización de producto</strong>, espacios e imagen de
-							marca y mostrar la mejor faceta de tu presentación de nogocio o
+							marca y mostrar la mejor faceta de tu presentación de negocio o
 							marca personal. <br />
-							Generando imagenes por computadora, se{' '}
+							Generando imágenes por computadora, se{' '}
 							<strong>resalta tu producto</strong> para mostrar lo mejor en
-							cualquier ambito y luzca genial en <strong>tu página web</strong>.
+							cualquier ámbito y luzca genial en <strong>tu página web</strong>.
 						</h3>
 						<div className={s.skills_gloss}>
 							<h3>RENDERIZAIÓN</h3>
@@ -151,9 +152,7 @@ export default function Home() {
 								/>
 							</div>
 						</div>
-						<Link href={'/galery'} className='link'>
-							Galería 3D
-						</Link>
+						<LinkButton link={'/galery'} text={'Galería 3D'} />
 					</div>
 				</section>
 			</main>
