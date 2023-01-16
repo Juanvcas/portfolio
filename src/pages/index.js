@@ -26,7 +26,7 @@ export default function Home() {
 					<div className={`content-limit ${s['main_hero-cont']}`}>
 						<figure>
 							<img
-								src='/assets/portada.png'
+								src='https://i.postimg.cc/c4xN5vvv/Juan.jpg'
 								alt='Juan Vasquez'
 								title='Juan Vasquez'
 								loading='lazy'
